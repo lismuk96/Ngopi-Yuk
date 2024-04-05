@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perhitungan Dana Sosial</title>
+  <style>
+    .red { color: red; }
+    .purple { color: purple; }
+    .green { color: green; }
+  </style>
+</head>
+<body>
+
+<h2>Input Dana Sosial</h2>
+
+<label for="totalDana">Total Dana Sosial:</label>
+<input type="number" id="totalDana">
+
+<button onclick="hitungDana()">Hitung</button>
+
+<p>Hasil Perhitungan:</p>
+<p id="hasil"></p>
+
+<script>
+function hitungDana() {
+  const totalDana = parseFloat(document.getElementById("totalDana").value);
+
+  const fakirMiskin = totalDana * 0.5;
+  const amilin = totalDana * 0.125;
+  const sabilillahPengelola = totalDana * 0.125;
+
+  const pengelolaA1 = sabilillahPengelola * 0.075 * 0.5;
+  const pengelolaA2 = sabilillahPengelola * 0.075 * 0.5;
+  const pengelolaB = sabilillahPengelola * 0.05;
+
+  const sabilillahJamiyyah = totalDana * 0.25;
+
+  const PJ = sabilillahJamiyyah * 0.35;
+  const PC = sabilillahJamiyyah * 0.30;
+  const PD = sabilillahJamiyyah * 0.10;
+  const PW = sabilillahJamiyyah * 0.10;
+  const PP = sabilillahJamiyyah * 0.15;
+
+  const hasil = `Dana Fakir Miskin: <span class="red">${fakirMiskin}</span><br>
+                Dana Amilin: <span class="purple">${amilin}</span><br>
+                Dana Sabilillah Pengelola: <span class="green">${sabilillahPengelola}</span><br>
+                Dana Pengelola A1: <span class="green">${pengelolaA1}</span><br>
+                Dana Pengelola A2: <span class="green">${pengelolaA2}</span><br>
+                Dana Pengelola B: <span class="green">${pengelolaB}</span><br>
+                Dana PJ: <span class="green">${PJ}</span><br>
+                Dana PC: <span class="green">${PC}</span><br>
+                Dana PD: <span class="green">${PD}</span><br>
+                Dana PW: <span class="green">${PW}</span><br>
+                Dana PP: <span class="green">${PP}</span>`;
+
+  document.getElementById("hasil").innerHTML = hasil;
+}
+</script>
+
+</body>
+</html>
