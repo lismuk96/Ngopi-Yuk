@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Perhitungan Dana Sosial</title>
+  <title>Hitung Zakat Fitrah</title>
   <style>
     .red { color: red; }
     .purple { color: purple; }
@@ -10,9 +10,9 @@
 </head>
 <body>
 
-<h2>Input Dana Sosial</h2>
+<h2>Masukan Total Zakat yang diterima</h2>
 
-<label for="totalDana">Total Dana Sosial:</label>
+<label for="totalDana">Total Zakat masuk:</label>
 <input type="number" id="totalDana">
 
 <button onclick="hitungDana()">Hitung</button>
@@ -40,13 +40,13 @@ function hitungDana() {
   const PW = sabilillahJamiyyah * 0.10;
   const PP = sabilillahJamiyyah * 0.15;
 
-  const hasil = `Dana Fakir Miskin: <span class="red">${fakirMiskin}</span><br>
-                Dana Amilin: <span class="purple">${amilin}</span><br>
-                Dana Sabilillah Pengelola:<br>
+  const hasil = `Dana Fakir Miskin (4/8).: <span class="red">${fakirMiskin}</span><br>
+                Dana Amilin (1/8_).: <span class="purple">${amilin}</span><br>
+                Dana Sabilillah Pengelola (1/8_).:<br>
                 Dana LAZ KLP: <span class="green">${pengelolaA1}</span><br>
                 Dana LAZ KL: <span class="green">${pengelolaA2}</span><br>
                 Dana LAZ PP: <span class="green">${pengelolaB}</span><br>
-                Dana Sabilillah Jamiyyah:<br>
+                Dana Sabilillah Jamiyyah (2/8_).:<br>
                 Dana PJ: <span class="green">${PJ}</span><br>
                 Dana PC: <span class="green">${PC}</span><br>
                 Dana PD: <span class="green">${PD}</span><br>
